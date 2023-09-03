@@ -709,12 +709,6 @@ it(‘should update user name if changes it’, () => {
 });
 ```
 
-## Finishing presentation
+## QA time
 
-
-
-That’s all I wanted to say today. Feel free to reach me out in case you have questions or ideas on how I can improve my testing strategy.
-
-I would be curious to hear your opinion. Thank you, see you next time!
-
-[LinkedIn contacts]
+Thank you for your attention. I will now open the floor for a Q&A session. If you think of questions later or want a deeper discussion, I will be around for the entirety of the meetup, so please feel free to approach me. Additionally, I will be posting slides of this presentation in the meetup comments for reference. If you'd like to connect or discuss further, I will also share my LinkedIn profilethere. Looking forward to your questions and further interractions.
