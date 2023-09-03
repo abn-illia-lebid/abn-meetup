@@ -1,7 +1,3 @@
-Suggestions:
-
-- Cover tests: smoke, performance, mutation (Striker), architecture (Pact), memory leakage (memlab), snapshot
-
 # Full-Proof Testing: A Guide To Predicable Application
 
 ## About me and IDeal
@@ -21,14 +17,23 @@ That's why we invested a great deal of time into testing.
 During following 30 minutes I will:
 
 `List item #1 - What is the goal of testing` - Start with explaining the goal of testing. And how it helps you to sleep peacefully at night.
+
 `List item #2 - Testing pyramid` - Then I will speak about Testing Pyramid, the logic behind it, and will briefly cover other testing methods.  
+
 `List item #3 - Traceability matrix` - I will explain what is Traceability Matrix and how it helps you to gain confidence in your tests.
+
 `List item #4 - Unit tests`
+
 `List item #5 - Functional tests`
+
 `List item #6 - E2E tests` - I will cover in depth difference between Unit, Functional and E2E tests, and provide examples.
+
 `List item #7 - Integration with pipeline` - After that I will speak about the importance of integrating tests with the pipeline.
+
 `List item #8 - Breaking the tests` - I will explain how breaking the tests helps you to make them stronger.
+
 `List item #9 - Test Driven Development` - I will cover Test Driven Development, and show with example how it makes tests human readable.
+
 `List item #10 - Questions` - After that I will be open to questions or maybe suggestions.
 
 ## What is the goal of testing
@@ -66,6 +71,22 @@ Another way of looking at it is:
 
 - E2E level is proving that application is successfully connected to third-parties
 
+---
+
+There are a lot of other frontend testing method you may find useful in some situations. I tell in short about some of them, but will not go in details in this presentation.
+
+- **Accessibility testing (example: Axe Deque)** checks for common problems that may make it difficult for users with disabilities to use your website. This particular type of automated testing is not as useful in practice, in my experience it catches only 10% of accessibility problems. Therefore you should always manually check your application for an accessibility.
+- **Smoke tests (example: Cypress)** do a quick and basic check of the most important functionality. You should consider it if your tests are taking way too much time. It will quickly show that your application is broken, without a need to run all other tests.
+- **Performance tests (example: Google lighthouse)** on the frontend side are different from the backend. While backend performance tests are ensuring that an application can handle high load. Frontend performance tests focus on page load time, javascript executing time, total blocking time or in other words how much your website is lagging, and other user specific metrics.
+- **Mutation tests (example: Striker)** randomly change your code: if-else statements, arithmetic operations, removes random blocks and checks if your tests catch produced errors. 
+- **Contracts testing (example: Pact)** tests on unit level that contract between provider and consumer is still valid. This way provider can easily modify its API because he knows that it is still compliant with all its consumers (For example with your frontend application). 
+- **Memory leakage tests (example: MemLab)** as the name suggests helps you to find memory leaks in your application. If expected session time of your users is long, that is something you definitely want to test for.
+- **Snapshots tests (example: Jest)** compares confirmed html output with new version. Helps you spot unexpected UI changes.
+- **Security tests (Fortify)** checks your code for vulnerabilities.
+- **Code quality tests (SonarQube + Eslint)** helps you to ensure same code style withing a team or organisation. Also shows you common mistakes and problems in your codebase. 
+
+For sure using all of those methods at the same time is not realisticly possible. You have to decide by yourself what is going to give the most benefits in your case.
+
 ## Traceability matrix
 
 The goal of the tests as whole, is to prove that application is working as expected from user perspective.
@@ -98,6 +119,8 @@ I will explain how you can ensure that business requirements is properly tested 
 > 
 > <br>
 
+<br>
+
 
 ### Unit level 
 
@@ -113,8 +136,6 @@ There are multiple tools you can use for that, the list below is not exclusive.
 
 Usually you gonna choose a combination of those. 
 For example we may take Jest + React testing library and Cypress component testing.
-
----
 
 > <br>
 > 
@@ -138,6 +159,8 @@ For example we may take Jest + React testing library and Cypress component testi
 > ```
 >
 > <br>
+
+<br>
 
 Let's go to the example. Imagine that we have following function, which is calculating the discount based on the price which we have provided.
 
@@ -181,6 +204,8 @@ So what I would expect to test:
 > ```
 >
 > <br>
+
+<br>
 
 And now we can safely modify that function without any fear of it breaking. 
 Because we know that test will check all functionality of this function each time that we are making any change.
@@ -249,6 +274,8 @@ If you cannot do that, then your tests are resilient enough.
 > 
 > <br>
 
+<br>
+
 Let's go back to the function which I showed in unit testing section.
 This function has some requirements, which you see on the right of the slide.
 Right now all of them are green, which means that they are passing.
@@ -292,7 +319,7 @@ Right now all of them are green, which means that they are passing.
 >
 > <br>
 
----
+<br>
 
 Now let's break it a bit. I have remove equal sign from if statements.
 If at least one tests has failed, it means that the requirement is properly tested.
@@ -683,6 +710,8 @@ it(‘should update user name if changes it’, () => {
 ```
 
 ## Finishing presentation
+
+
 
 That’s all I wanted to say today. Feel free to reach me out in case you have questions or ideas on how I can improve my testing strategy.
 
