@@ -4,7 +4,7 @@
 
 Nice to see you! I am Illia. 
 
-For last year I was working on the new IDeal as a frontend developer.
+For last year I was working on the new IDeal as a frontend developer in ABN Amro.
 
 I think most of you know what is IDeal. For those who don’t, it is most used online payment system in Netherlands.
 
