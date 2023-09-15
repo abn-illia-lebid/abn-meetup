@@ -61,7 +61,7 @@ Manual testing of all those edge cases would have taken hours if not days. But a
 
 There are a lot of frontend testing method you may find useful in some situations. In this presentation I will focus on Unit, Functional and E2E tests. But other are also worth mentioning:
 
-- **Unit, Functional, E2E tests (Jest, Cypress)** helps you to ensure that functionality of your application is working properly.
+- **Unit, Functional or in other words Integration or Service, and E2E tests (Jest, Cypress)** helps you to ensure that functionality of your application is working properly.
 - **Accessibility testing (example: Axe Deque)** checks for common problems that may make it difficult for users with disabilities to use your website. This particular type of automated testing is not as useful in practice, in my experience it catches only 10% of accessibility problems. Therefore you should always manually check your application for an accessibility.
 - **Smoke tests (example: Cypress)** do a quick and basic check of the most important functionality. You should consider it if your tests are taking way too much time. It will quickly show that your application is broken, without a need to run all other tests.
 - **Performance tests (example: Google lighthouse)** on the frontend side are different from the backend. While backend performance tests are ensuring that an application can handle high load. Frontend performance tests focus on page load time, javascript executing time, total blocking time or in other words how much your website is lagging, and other user specific metrics.
@@ -214,6 +214,8 @@ And now we can safely modify that function without any fear of it breaking.
 Because we know that test will check all functionality of this function each time that we are making any change.
 
 ### Functional level
+
+**** TODO: list of the testing tools ****
 
 ![Web shop example photo](Webshop.png)
 
