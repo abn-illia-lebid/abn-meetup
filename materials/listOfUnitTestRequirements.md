@@ -1,0 +1,11 @@
+**It should:**
+- give 5% discount if price is 200
+- give 5% discount if price is between 200 and 500
+- give 10% discount if price is 500
+- give 10% discount if price is between 500 and 1000
+- give 25% discount if price is 1000
+- give 25% discount if price is more than 1000
+- give 0% discount if price is less than 200
+- throw an error if no price is provided
+- throw an error if price is less than 0
+- throw an error if price is not a number

@@ -110,18 +110,7 @@ Few examples of such a requirement:
 During the development we should go back to the traceability matrix, and ensure that all such requirements are met. 
 I will explain how you can ensure that business requirements is properly tested on section "Breaking the tests".
 
-> <br />
-> 
-> **Example of table, with some of requirements marked as tests, and others as not tested**
->
-> | Actions                         | Expected result                   | Is Tested |
-> |---------------------------------|-----------------------------------|-----------|
-> | User fills an input incorrectly | Validation message appears        | NO        |
-> | User clicks cancel button       | Confirmation modal appears        | NO        |
-> | User confirms cancellation      | User is redirected to the webshop | YES       |
-> | User confirms cancellation      | Transaction is cancelled          | YES       |
->
-> <br />
+[Traceability matrix](./materials/traceabilityMatrix.md)
 
 ### Unit level 
 
@@ -136,59 +125,24 @@ There are multiple tools you can use for that, the list you see on the slide is 
 
 [Example of unit level function](./materials/exampleOfUnitLevelFunction.md)
 
-<br>
-
 Let's go to the example. Imagine that we have following function, which is calculating the discount based on the price which we have provided.
 
-**It should:**
-- give 5% discount if price is 200
-- give 5% discount if price is between 200 and 500
-- give 10% discount if price is 500
-- give 10% discount if price is between 500 and 1000
-- give 25% discount if price is 1000
-- give 25% discount if price is more than 1000
-- give 0% discount if price is less than 200
-- throw an error if no price is provided
-- throw an error if price is less than 0
-- throw an error if price is not a number
+[List of unit test requiremements](./materials/listOfUnitTestRequirements.md)
 
 So what I would expect to test:
 
 - That discount is correctly applied in respective price range. Including edge cases.
 - That it throws an error if we provide unexpected parameters.
 
-> <br>
-> 
-> **Example of modified function**
-> ```javascript
-> function validatePrice(price) {
->	  if(!price) throw new Error('PriceIsRequiredParameter');
->	  if(!isNumber(price)) throw new Error('NotANumber');
->	  if(price < 0) throw new Error('NegativeNumber');
-> }
-> 
-> function calculateDiscount(price) {
->  	const error = validatePrice(price);
->
-> 	if(error) throw error;
->
-> 	if(price < 200) return 0;
-> 	else if(price < 500) return price * 0.05;
-> 	else if(price < 1000) return price * 0.1;
-> 	else return price * 0.25;
-> }
-> ```
->
-> <br>
+[Example of modified unit level function that fails](./materials/ex)
 
-<br>
+[Example of modified unit level function that passes](./materials/exampleOfModifiedUnitLevelFunction.md)
 
 And now we can safely modify that function without any fear of it breaking. 
 Because we know that test will check all functionality of this function each time that we are making any change.
 
 ### Functional level
 
-**** TODO: list of the testing tools ****
 
 ![Web shop example photo](./WebShop.png)
 
@@ -217,6 +171,12 @@ This is the most expensive, but absolutely necessary part of our testing strateg
 In our example from above, we would have to test only HappyFlow, since login page till SuccessScreen. 
 
 It will prove that connection between all the parties is estabilished.
+
+### Functional and E2E level
+
+You can use same tools and write same tests for functional and e2e level. The only difference is what you test.
+
+[List of function level testing tools](./materials/listOfFunctionalLevelTestingTools.md)
 
 ## Integration with pipeline
 
