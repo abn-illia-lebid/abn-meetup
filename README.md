@@ -125,41 +125,16 @@ I will explain how you can ensure that business requirements is properly tested 
 
 ### Unit level 
 
+[List of unit level testing tools](./materials/listOfUnitLevelTestingTools.md)
+
 Unit tests are the foundation of your testing strategy. 
 They are cheap, fast, inexpensive.
 This allows us to cover as much edge cases as we want.
 
-There are multiple tools you can use for that, the list below is not exclusive.
+There are multiple tools you can use for that, the list you see on the slide is not exclusive.
 
-- Jest; Jasmine; Karma; Mocha; Ava (Testing javascript modules)
-- Cypress component testing; Storybook (For testing components)
-- React testing library; Vue test utils; Vitest (For framework testing)
 
-Usually you gonna choose a combination of those. 
-For example we may take Jest + React testing library and Cypress component testing.
-
-> <br>
-> 
-> **Example of function**
-> ```javascript
-> function calculateDiscount(price) {
->	  if(!price) throw new Error('PriceIsRequiredParameter');
->	  if(!isNumber(price)) throw new Error('NotANumber');
->	  if(price < 0) throw new Error('NegativeNumber');
->
->	  if(price === 0) return 0;
->
->	  if(price >= 1000) return price * 0.25;
->
->	  if(price >= 500) return price * 0.1;
->
->	  if(price >= 200) return price * 0.05;
->
->	  return 0;
-> }
-> ```
->
-> <br>
+[Example of unit level function](./materials/exampleOfUnitLevelFunction.md)
 
 <br>
 
@@ -215,7 +190,7 @@ Because we know that test will check all functionality of this function each tim
 
 **** TODO: list of the testing tools ****
 
-![Web shop example photo](Webshop.png)
+![Web shop example photo](./WebShop.png)
 
 While unit tests are focusing on a piece of the code, functional tests are checking your whole application. 
 
