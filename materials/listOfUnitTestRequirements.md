@@ -1,4 +1,5 @@
 **It should:**
+- give 0% discount if price is less than 200
 - give 5% discount if price is 200
 - give 5% discount if price is between 200 and 500
 - give 10% discount if price is 500
