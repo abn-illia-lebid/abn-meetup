@@ -110,20 +110,18 @@ Few examples of such a requirement:
 During the development we should go back to the traceability matrix, and ensure that all such requirements are met. 
 I will explain how you can ensure that business requirements is properly tested on section "Breaking the tests".
 
-
-> <br>
+> <br />
 > 
 > **Example of table, with some of requirements marked as tests, and others as not tested**
-> | Requirement                                                                 | Is Tested |
-> |-----------------------------------------------------------------------------|-----------|
-> | When user fills an input incorrectly, validation message should appear      | NO        |
-> | When user clicks cancel, confirmation modal should appear                   | YES       |
-> | When user confirms cancelation, he should be redirected back to the webshop | NO        |
-> 
-> <br>
-
-<br>
-
+>
+> | Actions                         | Expected result                   | Is Tested |
+> |---------------------------------|-----------------------------------|-----------|
+> | User fills an input incorrectly | Validation message appears        | NO        |
+> | User clicks cancel button       | Confirmation modal appears        | NO        |
+> | User confirms cancellation      | User is redirected to the webshop | YES       |
+> | User confirms cancellation      | Transaction is cancelled          | YES       |
+>
+> <br />
 
 ### Unit level 
 
