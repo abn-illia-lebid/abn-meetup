@@ -4,58 +4,41 @@
 
 Nice to see you! I am Illia. 
 
-For last year I was working on the new IDeal as a frontend developer in ABN Amro.
+Long time ago, I was working as a freelancer. During that time, I didn't know yet what testing is.
 
-I think most of you know what is IDeal. For those who don’t, it is most used online payment system in Netherlands.
+When I was finishing my project, I was sending it to the client. He was finding the bugs for me. And I fiercely fought with them. There was no end to them. The longer I fought, the more bugs were appearing. Some of them became already familiar to me, I remembered that I have killed them already before.
 
-For us it was highly important that our application will be able to work properly for most of the users. Each mistake that we would have affected thousands if not millions of users.
+Then, I discovered E2E testing. It was a breathe of the air. I would set test to look closely if main functionality of the project is still working. And each time I killed a bug, I set new test, to watch for his re-appearence. Amount of bugs decreased, they became easier to fight. And they stopped coming back. My client was happy. But as the project growed, E2E tests became a heavy burden. Their slow nature and big demands dragged me down. Each time I made small changes to the project, I had to wait for hours. I also had to always run a copy of the backend, and maintain complex system on my laptop.
 
-That's why we invested a great deal of time into testing.
+I decided that this was enough for me. My first step was to remove the backend from my tests. I replaced it with mock server, and as a result, I got Functional tests. Now they were testing most of the functionality of my application, and E2E tests were guarding only the connection to the backend. It made the testing system simpler, and saved me several hours each time I introduced changes.
+
+But I wanted more! It was not enough for me So I started writting unit tests. I was settings small tests everywhere in the code, and bugs didn't have any place to hide. Those tests were extremely fast and didn't eat much. I was still using Functional and E2E tests to ensure that the integration between parts of the application and external services is still working as expected. Now, I was able to catch most of the bugs in minutes, and the most evasive ones were caught less than in ten minutes.
+
+Currently I am working on iDeal as a frontend developer in ABN Amro. Our testing system became even more advanced, and having her in place allows me to sleep peacefully at night.
 
 ## Plan for the session
 
-During following 30 minutes I will:
+During following 20 minutes I will:
 
-`List item #1 - What is the goal of testing` - Start with explaining the goal of testing. And how it helps you to sleep peacefully at night.
+`List item #1 - Testing pyramid` - Then I will speak about Testing Pyramid, the logic behind it, and will briefly cover other testing methods.  
 
-`List item #2 - Testing pyramid` - Then I will speak about Testing Pyramid, the logic behind it, and will briefly cover other testing methods.  
+`List item #2 - Types of tests` - I will cover shortly most used types of tests, and explain why and when you might want to use them.
 
-`List item #3 - Types of tests` - I will cover shortly most used types of tests, and explain why and when you might want to use them.
+`List item #3 - Traceability matrix` - I will explain what is Traceability Matrix and how it helps you to gain confidence in your tests.
 
-`List item #4 - Traceability matrix` - I will explain what is Traceability Matrix and how it helps you to gain confidence in your tests.
+`List item #4 - Unit tests`
 
-`List item #5 - Unit tests`
+`List item #5 - Functional tests`
 
-`List item #6 - Functional tests`
+`List item #6 - E2E tests` - I will cover in depth difference between Unit, Functional and E2E tests, and provide examples.
 
-`List item #7 - E2E tests` - I will cover in depth difference between Unit, Functional and E2E tests, and provide examples.
+`List item #7 - Integration with pipeline` - After that I will speak about the importance of integrating tests with the pipeline.
 
-`List item #8 - Integration with pipeline` - After that I will speak about the importance of integrating tests with the pipeline.
+`List item #8 - Breaking the tests` - I will explain how breaking the tests helps you to make them stronger.
 
-`List item #9 - Breaking the tests` - I will explain how breaking the tests helps you to make them stronger.
+`List item #9 - Test Driven Development` - I will cover Test Driven Development, and show with example how it makes tests human readable.
 
-`List item #10 - Test Driven Development` - I will cover Test Driven Development, and show with example how it makes tests human readable.
-
-`List item #11 - Questions` - After that I will be open to questions or maybe suggestions.
-
-## What is the goal of testing
-
-Why should you write tests?
-
-I remember that first time when I heard about writting tests, I was working as a freelancer that time, I was thinking: "Why would I ever want to write a test, which proves what I just checked myself". 
-
-Until I started introducing changes to the application that was in production. My client was coming back to me with a list full of bugs that I just fixed last month. They were broken in completely different place in the code, but it was not something I could explain to him.
-
-The principle of tests is simple. They prove that your code is still fullfilling business requirements. Each time that we introduce changes, our tests are asking the code questions like:
-
-- Can user still pay for a product
-- Can user still cancel a transaction
-- Can user still get the content of the help section
-- Will user still be notified if something goes wrong
-- Will user still be helped out if he makes a mistake
-- And hungreds or thousands more
-
-Manual testing of all those edge cases would have taken hours if not days. But automated tests can do it in a matter of minutes.
+`List item #10 - Questions` - After that I will be open to questions or maybe suggestions.
 
 ## Types of tests
 
