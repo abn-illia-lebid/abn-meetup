@@ -62,10 +62,11 @@ There are multiple species of bugs. And to catch them all, you need different we
 
 Weapons are useless if you don't use them properly. Let me tell you about some handy approaches:
 
-- **Testing pyramid** - helps you to set priorities
-- **Traceability matrix** - ensures that you don't miss any requirement
-- **Test driven development** - makes your tests more humane and shifts your focus from "how do I do it" to "what should I do"
-- **Breaking the tests** - will help to make your tests stronger
+- **Testing pyramid**
+- **Traceability matrix**
+- **Test driven development**
+- **Breaking the tests**
+- **Integration with the pipeline**
 
 ## Testing Pyramid
 
@@ -157,262 +158,17 @@ You can use same tools and write same tests for functional and e2e level. The on
 
 [List of function level testing tools](./materials/listOfFunctionalLevelTestingTools.md)
 
-## Integration with pipeline
-
-We can run all our tests from local machine, but that is prone to human error. 
-You can simple forget to run them before deploying it to production. 
-
-Therefore, we should integrated those tests into our pipeline. 
-That way each time we push our code, unit and functional tests will be run. 
-And when we deploy our application to the testing environment, E2E tests would be run.
-
-If one of the tests will fail, it will stop the pipeline. 
-Which will make it impossible to break the production.
-
 ## Breaking the tests
 
-Let's speak a bit more about how we can ensure that each requirement of Traceability Matrix is properly tested. 
-It is super important, because as long as all the requirements are properly tested, your application would be working fine. 
-As long as you have not missed something in the traceability matrix.
+How do you understand that your tests are stable enough? 
 
-We can mark that requirement is tested when we write tests for it. But that would not be enough.
-To be sure that your tests are good enough, we should try to break the functionality of an application without triggering tests.
-If you cannot do that, then your tests are resilient enough.
+Break the code! Break the application! Introduce unexpected change! Do whatever you can to fool your tests. Introduce the chaos, and see if they can catch it.
 
-> <br>
->
->	**Traceability matrix table, including price example**
-> | Requirement                                                                    | Is Tested   |
-> |--------------------------------------------------------------------------------|-------------|
-> | When user basket price is higher less than 200 Euro - no discount should apply | NO          |
-> | When user basket price is higher than 200 Euro - 5% discount should apply      | NO          |
-> | When user basket price is higher than 500 Euro - 10% discount should apply     | NO          |
-> | When user basket price is higher than 1000 Euro - 25% discount should apply    | NO          |
-> 
-> <br>
+Were you not able to do it? Well, then you can trust your tests.
 
-<br>
+## Test Driven Development
 
-Let's go back to the function which I showed in unit testing section.
-This function has some requirements, which you see on the right of the slide.
-Right now all of them are green, which means that they are passing.
-
-> <br>
-> 
-> **Example of function**
-> ```javascript
-> function calculateDiscount(price) {
->	  if(!price) throw new Error('PriceIsRequiredParameter');
->	  if(!isNumber(price)) throw new Error('NotANumber');
->	  if(price < 0) throw new Error('NegativeNumber');
->
->	  if(price === 0) return 0;
->
->	  if(price >= 1000) return price * 0.25;
->
->	  if(price >= 500) return price * 0.1;
->
->	  if(price >= 200) return price * 0.05;
->
->	  return 0;
-> }
-> ```
->
-> <br>
-
-> <br>
-> 
-> **List of requirements**
-> It should
-> - give 5% discount if price is 200 `Green`
-> - give 5% discount if price is between 200 and 500 `Green`
-> - give 10% discount if price is 500 `Green`
-> - give 10% discount if price is between 500 and 1000 `Green`
-> - give 25% discount if price is 1000 `Green`
-> - give 25% discount if price is more than 1000 `Green`
-> - give 0% discount if price is less than 200 `Green`
-> - throw an error if price is not provided `Green`
-> - throw an error if price is not a number `Green`
->
-> <br>
-
-<br>
-
-Now let's break it a bit. I have remove equal sign from if statements.
-If at least one tests has failed, it means that the requirement is properly tested.
-In our case for each equal sign we have one test failing, which is good.
-
-> <br>
-> 
-> **Function example with > instead of >= sign**
-> ```javascript
-> function calculateDiscount(price) {
->	  if(!price) throw new Error('PriceIsRequiredParameter');
->	  if(!isNumber(price)) throw new Error('NotANumber');
->	  if(price < 0) throw new Error('NegativeNumber');
->
->	  if(price === 0) return 0;
->
->	  if(price > 1000) return price * 0.25;
->
->	  if(price > 500) return price * 0.1;
->
->	  if(price > 200) return price * 0.05;
->
->	  return 0;
-> }
-> ```
->
-> <br>
-
-> <br>
->
-> It should
-> - give 5% discount if price is 200 `Red`
-> - give 5% discount if price is between 200 and 500 `Green`
-> - give 10% discount if price is 500 `Red`
-> - give 10% discount if price is between 500 and 1000 `Green`
-> - give 25% discount if price is 1000 `Red`
-> - give 25% discount if price is more than 1000 `Green`
-> - give 0% discount if price is less than 200 `Green`
-> - throw an error if price is not provided `Green`
-> - throw an error if price is not a number `Green`
->
-> <br>
-
----
-
-Now let's fix the mistake, and introduce new one. This time I do not return an error if price is less than 0.
-And we see that all tests are green.
-Even though we introduced some unexpected changes to the code, no test was alerted. It means that we undertest this function.
-
-> <br>
-> 
-> **Function example without throwing error if there is no price provided**
-> ```javascript
-> function calculateDiscount(price) {
->	  if(!price) throw new Error('PriceIsRequiredParameter');
->	  if(!isNumber(price)) throw new Error('NotANumber');
->	  if(price < 0) throw new Error('NegativeNumber');
->
->	  if(price === 0) return 0;
->
->	  if(price >= 1000) return price * 0.25;
->
->	  if(price >= 500) return price * 0.1;
->
->	  if(price >= 200) return price * 0.05;
->
->	  return 0;
-> }
-> ```
->
-> <br>
-
-> <br>
-> 
-> It should
-> - give 5% discount if price is 200 `Green`
-> - give 5% discount if price is between 200 and 500 `Green`
-> - give 10% discount if price is 500 `Green`
-> - give 10% discount if price is between 500 and 1000 `Green`
-> - give 25% discount if price is 1000 `Green`
-> - give 25% discount if price is more than 1000 `Green`
-> - give 0% discount if price is less than 200 `Green`
-> - throw an error if price is not provided `Green`
-> - throw an error if price is not a number `Green`
->
-> <br>
-
----
-
-Let's add a new test now, which is called "It should throw an error if price is less than zero". Now it is Red.
-
-
-> <br>
-> 
-> **Function example without throwing error if there is no price provided**
-> ```javascript
-> function calculateDiscount(price) {
->	  if(!price) throw new Error('PriceIsRequiredParameter');
->	  if(!isNumber(price)) throw new Error('NotANumber');
->	  if(price < 0) throw new Error('NegativeNumber');
->
->	  if(price === 0) return 0;
->
->	  if(price >= 1000) return price * 0.25;
->
->	  if(price >= 500) return price * 0.1;
->
->	  if(price >= 200) return price * 0.05;
->
->	  return 0;
-> }
-> ```
->
-> <br>
-
-> <br>
->
-> It should
-> - give 5% discount if price is 200 `Green`
-> - give 5% discount if price is between 200 and 500 `Green`
-> - give 10% discount if price is 500 `Green`
-> - give 10% discount if price is between 500 and 1000 `Green`
-> - give 25% discount if price is 1000 `Green`
-> - give 25% discount if price is more than 1000 `Green`
-> - give 0% discount if price is less than 200 `Green`
-> - throw an error if price is not provided `Green`
-> - throw an error if price is not a number `Green`
-> - throw an error if price is less than 0 `Red`
->
-> <br>
-
----
-
-We return back the line I removed from the code, and now we see that that test we just wrote is now green again.
-
-> <br>
-> 
-> **Example of function**
-> ```javascript
-> function calculateDiscount(price) {
->	  if(!price) throw new Error('PriceIsRequiredParameter');
->	  if(!isNumber(price)) throw new Error('NotANumber');
->	  if(price < 0) throw new Error('NegativeNumber');
->
->	  if(price === 0) return 0;
->
->	  if(price >= 1000) return price * 0.25;
->
->	  if(price >= 500) return price * 0.1;
->
->	  if(price >= 200) return price * 0.05;
->
->	  return 0;
-> }
-> ```
->
-> <br>
-
-> <br>
-> 
-> It should
-> - give 5% discount if price is 200 `Green`
-> - give 5% discount if price is between 200 and 500 `Green`
-> - give 10% discount if price is 500 `Green`
-> - give 10% discount if price is between 500 and 1000 `Green`
-> - give 25% discount if price is 1000 `Green`
-> - give 25% discount if price is more than 1000 `Green`
-> - give 0% discount if price is less than 200 `Green`
-> - throw an error if price is less than 0 `Green`
-> - throw an error if price is not provided `Green`
->
-> <br>
-
-Using this method, if you try hard enough to break the requirement you have in the Traceability matrix, and you are not able to do that. Then you can mark it as tested. It would be very hard to introduce an unexpected bug that will break it.
-
-## Test Driven Development and Behaviour Driven Testing
+T
 
 Most likely you have already heard about test driven development and its advantages. Maybe you also heard that should not test implementation, but focus instead on behaviour of the code.
 
@@ -625,6 +381,14 @@ it(‘should update user name if changes it’, () => {
 	expect(wrapper.find(‘#user-name’).text()).toBe(‘illia.lebid’);
 });
 ```
+
+## Integration with pipeline
+
+What if you forget to run your automated tests and deploy untested application to production?
+
+Worry not, because when you include the tests into the pipeline, they will be run automatically.
+
+The pipeline will also automate the deployment to production. Which gives you even more safety and less headache.
 
 ## QA time
 
