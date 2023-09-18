@@ -6,7 +6,7 @@ Nice to see you! I am Illia.
 
 Long time ago, I was working as a freelancer. During that time, I didn't know yet what testing is.
 
-When I was finishing my project, I was sending it to the client. He was finding the bugs for me. And I fiercely fought with them. There was no end to them. The longer I fought, the more bugs were appearing. Some of them became already familiar to me, I remembered that I have killed them already before.
+When I was finishing my project, I was sending it to the client. I rested few days, while he was searching the bugs for me. Then I fiercely fought with them. There was no end to them. The longer I fought, the more bugs were appearing. Some of them became already familiar to me, I remembered that I have killed them already before.
 
 Then, I discovered E2E testing. It was a breathe of the air. I would set test to look closely if main functionality of the project is still working. And each time I killed a bug, I set new test, to watch for his re-appearence. Amount of bugs decreased, they became easier to fight. And they stopped coming back. My client was happy. But as the project growed, E2E tests became a heavy burden. Their slow nature and big demands dragged me down. Each time I made small changes to the project, I had to wait for hours. I also had to always run a copy of the backend, and maintain complex system on my laptop.
 
@@ -83,23 +83,11 @@ As a last resort, if nothing else helps. Add a test case to your manual testing 
 
 ## Traceability matrix
 
-The goal of the tests as whole, is to prove that application is working as expected from user perspective.
+Before you start to test anything. You should understand what is expected from your application. As you gather all your requirements, you keep track of their testing status using traceability matrix.
 
-To ensure that, we should use Traceability Matrix. 
-It is a list of all business requirements of an application.
+More often than not, if you found a bug, you missed some requirement in the initial stage. So each time you find a bug, check the traceability matrix and update it accordingly.
 
-The first step would be to identify all the business requirements.
-
-Few examples of such a requirement:
-
-- “When user fills an input incorrectly, validation message should appear”.
-
-- “When user clicks cancel, confirmation modal should appear”
-
-- “When user confirms cancelation, he should be redirected back to the webshop”
-
-During the development we should go back to the traceability matrix, and ensure that all such requirements are met. 
-I will explain how you can ensure that business requirements is properly tested on section "Breaking the tests".
+Another advantage of traceability matrix, is that your clients or stackeholders without technical knowledge will be able to read them.
 
 [Traceability matrix](./materials/traceabilityMatrix.md)
 
