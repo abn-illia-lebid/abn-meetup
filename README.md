@@ -1,6 +1,6 @@
 # Full-Proof Testing: A Guide To Predicable Application
 
-## About me and IDeal
+## Why
 
 Nice to see you! I am Illia. 
 
@@ -13,6 +13,8 @@ Then, I discovered E2E testing. It was a breathe of the air. I would set test to
 I decided that this was enough for me. My first step was to remove the backend from my tests. I replaced it with mock server, and as a result, I got Functional tests. Now they were testing most of the functionality of my application, and E2E tests were guarding only the connection to the backend. It made the testing system simpler, and saved me several hours each time I introduced changes.
 
 But I wanted more! It was not enough for me So I started writting unit tests. I was settings small tests everywhere in the code, and bugs didn't have any place to hide. Those tests were extremely fast and didn't eat much. I was still using Functional and E2E tests to ensure that the integration between parts of the application and external services is still working as expected. Now, I was able to catch most of the bugs in minutes, and the most evasive ones were caught less than in ten minutes.
+
+## Me and IDeal
 
 Currently I am working on iDeal as a frontend developer in ABN Amro. Our testing system became even more advanced, and having her in place allows me to sleep peacefully at night.
 
@@ -42,20 +44,19 @@ During following 20 minutes I will:
 
 ## Types of tests
 
-There are a lot of frontend testing method you may find useful in some situations. In this presentation I will focus on Unit, Functional and E2E tests. But other are also worth mentioning:
+There are multiple species of bugs. And to catch them all, you need different weapons. Let me tell you about them.
 
-- **Unit, Functional or in other words Integration or Service, and E2E tests (Jest, Cypress)** helps you to ensure that functionality of your application is working properly.
-- **Accessibility testing (example: Axe Deque)** checks for common problems that may make it difficult for users with disabilities to use your website. This particular type of automated testing is not as useful in practice, in my experience it catches only 10% of accessibility problems. Therefore you should always manually check your application for an accessibility.
-- **Smoke tests (example: Cypress)** do a quick and basic check of the most important functionality. You should consider it if your tests are taking way too much time. It will quickly show that your application is broken, without a need to run all other tests.
-- **Performance tests (example: Google lighthouse)** on the frontend side are different from the backend. While backend performance tests are ensuring that an application can handle high load. Frontend performance tests focus on page load time, javascript executing time, total blocking time or in other words how much your website is lagging, and other user specific metrics.
-- **Mutation tests (example: Striker)** randomly change your code: if-else statements, arithmetic operations, removes random blocks and checks if your tests catch produced errors. 
-- **Contracts testing (example: Pact)** tests on unit level that contract between provider and consumer is still valid. This way provider can easily modify its API because he knows that it is still compliant with all its consumers (For example with your frontend application). 
+- **Unit tests** - are testing pieces of code separately from each other
+- **Functional tests** - are testing your whole application in isolation from external services
+- **E2E tests** - are focusing on integration between your application and external services
+- **Accessibility tests (example: Axe Deque)** check for common problems that may make it difficult for users with disabilities to use your website.
+- **Performance tests (example: Google lighthouse)** will explain you how much time user will take to load the page, how bad network will affect his experience, and what is the load on his processor
+- **Mutation tests (example: Striker)** will randomly generate bugs in your code to check your tests can spot them. Basically they test your tests.
+- **Contract tests (example: Pact)** are checking that agreement between your frontend and backend is still correct.
 - **Memory leakage tests (example: MemLab)** as the name suggests helps you to find memory leaks in your application. If expected session time of your users is long, that is something you definitely want to test for.
 - **Snapshots tests (example: Jest)** compares confirmed html output with new version. Helps you spot unexpected UI changes.
 - **Security tests (Fortify)** checks your code for vulnerabilities.
 - **Code quality tests (SonarQube + Eslint)** helps you to ensure same code style withing a team or organisation. Also shows you common mistakes and problems in your codebase. 
-
-For sure using all of those methods at the same time is not realisticly possible. You have to decide by yourself what is going to give the most benefits in your case.
 
 ## Testing Pyramid
 
