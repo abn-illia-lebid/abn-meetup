@@ -49,14 +49,22 @@ There are multiple species of bugs. And to catch them all, you need different we
 - **Unit tests** - are testing pieces of code separately from each other
 - **Functional tests** - are testing your whole application in isolation from external services
 - **E2E tests** - are focusing on integration between your application and external services
-- **Accessibility tests (example: Axe Deque)** check for common problems that may make it difficult for users with disabilities to use your website.
-- **Performance tests (example: Google lighthouse)** will explain you how much time user will take to load the page, how bad network will affect his experience, and what is the load on his processor
-- **Mutation tests (example: Striker)** will randomly generate bugs in your code to check your tests can spot them. Basically they test your tests.
-- **Contract tests (example: Pact)** are checking that agreement between your frontend and backend is still correct.
-- **Memory leakage tests (example: MemLab)** as the name suggests helps you to find memory leaks in your application. If expected session time of your users is long, that is something you definitely want to test for.
-- **Snapshots tests (example: Jest)** compares confirmed html output with new version. Helps you spot unexpected UI changes.
-- **Security tests (Fortify)** checks your code for vulnerabilities.
-- **Code quality tests (SonarQube + Eslint)** helps you to ensure same code style withing a team or organisation. Also shows you common mistakes and problems in your codebase. 
+- **Accessibility tests** check for common problems that may make it difficult for users with disabilities to use your website.
+- **Performance tests** will explain you how much time user will take to load the page, how bad network will affect his experience, and what is the load on his processor
+- **Mutation tests** will randomly generate bugs in your code to check your tests can spot them. Basically they test your tests.
+- **Contract tests** are checking that agreement between your frontend and backend is still correct.
+- **Memory leakage tests** as the name suggests helps you to find memory leaks in your application. If expected session time of your users is long, that is something you definitely want to test for.
+- **Snapshots tests** compares confirmed html output with new version. Helps you spot unexpected UI changes.
+- **Security tests** checks your code for vulnerabilities.
+- **Code quality tests** helps you to ensure same code style withing a team or organisation. Also shows you common mistakes and problems in your codebase.
+
+## Testing methods
+
+Weapons are useless if you don't use them properly. Let me tell you about some handy approaches:
+
+- **Testing pyramid** - helps you to set priorities
+- **Traceability matrix** - ensures that you don't miss any requirement
+- **Test driven development** - makes your tests more humane and shifts your focus from "how do I do it" to "what should I do"
 
 ## Testing Pyramid
 
