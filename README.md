@@ -65,22 +65,21 @@ Weapons are useless if you don't use them properly. Let me tell you about some h
 - **Testing pyramid** - helps you to set priorities
 - **Traceability matrix** - ensures that you don't miss any requirement
 - **Test driven development** - makes your tests more humane and shifts your focus from "how do I do it" to "what should I do"
+- **Breaking the tests** - will help to make your tests stronger
 
 ## Testing Pyramid
 
-Tests are divided into several levels. Unit level, Functional level, and E2E level.
+As my story told, tests can be quite expensive. You have to use them sparingly.
 
-With unit tests being the fastest. And E2E tests being the slowest. 
-You should always aim to cover as much as possible on lower levels of the pyramid. 
-And as little as possible on higher levels.
+I would start with static tests. It is an one time investment. Once you setup them, they will give you advices during whole life of your application.
 
-Another way of looking at it is:
+Unit tests are fastest and least demanding. Don't be greedy with them.
 
-- Unit level proves that particular piece of code is working as expected.
+If unit tests didn't help, use Functional. They are here to ensure correct communication between parts of your application.
 
-- Functional level proves that application has integrated all those pieces correctly
+And E2E tests will let you know that you application is still producing correct result when it connects to the backend. Be careful with them.
 
-- E2E level is proving that application is successfully connected to third-parties
+As a last resort, if nothing else helps. Add a test case to your manual testing plan. But be prepared to spend a lot of time in a long run.
 
 ## Traceability matrix
 
