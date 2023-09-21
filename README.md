@@ -76,6 +76,8 @@ I would start with static tests. It is an one time investment. Once you setup th
 
 Unit tests are fastest and least demanding. Don't be greedy with them.
 
+You can also setup contracts tests, which would be of a great help. But for that you must get cooperation from your backend providers. It can be challenging if they are owned by different teams or even companies.
+
 If unit tests didn't help, use Functional. They are here to ensure correct communication between parts of your application.
 
 And E2E tests will let you know that you application is still producing correct result when it connects to the backend. Be careful with them.
@@ -114,8 +116,36 @@ Worry not, because when you include the tests into the pipeline, they will be ru
 
 The pipeline will also automate the deployment to production. Which gives you even more safety and less headache.
 
-## Unit level 
+## An example
 
+Let's imagine that we are developing a webshop and see with this example how we should approach its testing.
+
+![Web shop example photo](./WebShop.png)
+
+### Traceability matrix
+
+First we define the requirements. 
+
+| Action                              | Result                          | Tested |
+|-------------------------------------|---------------------------------|--------|
+| User adds a product to product cart | Product cart counter is updated | false  |
+| User opens catalog | List of products is updated | false |
+| User opens product cart|Products that are in user's product cart are displayed | false |
+| User goes to checkout | Checkout form is displayed | false |
+| User doesn't fills anything in checkout and submits form | Validation messages are displayed, and form is not submitted | false |
+| User fills checkout form and submits it -> backend returns error | Error message is displayed | false |
+| User fills checkout form and submits it -> backend returns success | Payment page is displayed | false |
+| User pays -> backend returns error | Error message is displayed | false |
+| User pays -> backend returns success | Success page is displayed | false |
+
+## Unit level
+
+## Functional level
+
+## E2E level
+
+You might wonder why when we have essentially the same test on functional level, we don't test all the details on E2E level. The reason lies in faster feedback, higher flexibility and less complexity from functional tests. The simpler you keep your E2E tests, the easier is to maintain them.
+## Unit level (OLD)
 
 Unit tests are the foundation of your testing strategy. 
 They are cheap, fast, inexpensive.
@@ -142,7 +172,7 @@ So what I would expect to test:
 And now we can safely modify that function without any fear of it breaking. 
 Because we know that test will check all functionality of this function each time that we are making any change.
 
-## Functional level
+## Functional level (OLD)
 
 
 ![Web shop example photo](./WebShop.png)
@@ -164,7 +194,7 @@ I would write several tests to prove that integration between those components w
 - **Checkout failture flow:** When user submits checkout form, error message should appear if backend fails with an error and user should be able to try again.
 - **Payment failure flow:** When user tries to pay, error message should appear if he doesn't have enough money.
 
-## E2E level
+## E2E level (OLD)
 
 Finally, we have to be sure that our application is successfully integrated with API, and whole system is working properly together. 
 This is the most expensive, but absolutely necessary part of our testing strategy.
@@ -172,10 +202,6 @@ This is the most expensive, but absolutely necessary part of our testing strateg
 In our example from above, we would have to test only HappyFlow, since login page till SuccessScreen. 
 
 It will prove that connection between all the parties is estabilished.
-
-## Functional and E2E level
-
-You can use same tools and write same tests for functional and e2e level. The only difference is what you test.
 
 ## QA time
 
