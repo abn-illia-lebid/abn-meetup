@@ -96,13 +96,15 @@ Another advantage of traceability matrix, is that your clients or stackeholders 
 
 ## Test Driven Development
 
-Egg or chicken question. What should come first? Tests or code. I firmly believe that it is in your best interests to write tests first. They are the direct requirement to your code, and better to let them shape the code, than code shape the tests. This approach will give you human readable tests and will prevent you from writting reduntant code.
+Egg or chicken question. What should come first? Tests or code. 
 
-I will show it in practice few slides from now.
+If you look closely, you will see that tests are direct requirements for code. Better let the requirements to shape the code, then otherwise. This approach will also give you human readable tests, will prevent you from writting reduntant code. And main principle (Red -> Green -> Refactor) will give you additional confidence in the tests.
 
 ## Breaking the tests
 
-How do you understand that your tests are stable enough? 
+How do you understand that your tests are stable enough?
+
+That's my favorite part.
 
 Break the code! Break the application! Introduce unexpected change! Do whatever you can to fool your tests. Introduce the chaos, and see if they can catch it.
 
@@ -120,25 +122,31 @@ The pipeline will also automate the deployment to production. Which gives you ev
 
 Let's imagine that we are developing a webshop and see with this example how we should approach its testing.
 
-![Web shop example photo](./WebShop.png)
+[Wireframe](https://wireframe.cc/PuuV02)
 
 ### Traceability matrix
 
 First we define the requirements. 
 
-| Action                              | Result                          | Tested |
-|-------------------------------------|---------------------------------|--------|
-| User adds a product to product cart | Product cart counter is updated | false  |
-| User opens catalog | List of products is updated | false |
-| User opens product cart|Products that are in user's product cart are displayed | false |
-| User goes to checkout | Checkout form is displayed | false |
-| User doesn't fills anything in checkout and submits form | Validation messages are displayed, and form is not submitted | false |
-| User fills checkout form and submits it -> backend returns error | Error message is displayed | false |
-| User fills checkout form and submits it -> backend returns success | Payment page is displayed | false |
-| User pays -> backend returns error | Error message is displayed | false |
-| User pays -> backend returns success | Success page is displayed | false |
+| Action                                                             | Result                                                       | Tested |
+|--------------------------------------------------------------------|--------------------------------------------------------------|--------|
+| User adds a product to product cart                                | Product cart counter is updated                              | false  |
+| User opens catalog                                                 | List of products is updated                                  | false  |
+| User opens product cart                                            | Products that are in user's product cart are displayed       | false  |
+| Product cart's total price is higher than 1000                     | 10% discount is applied                                      | false  |
+| Product cart's total price is less or equal than 1000              | No discount is applied                                       | false  |
+| User goes to checkout                                              | Checkout form is displayed                                   | false  |
+| User doesn't fills anything in checkout and submits form           | Validation messages are displayed, and form is not submitted | false  |
+| User fills checkout form and submits it -> backend returns error   | Error message is displayed                                   | false  |
+| User fills checkout form and submits it -> backend returns success | Payment page is displayed                                    | false  |
+| User pays -> backend returns error                                 | Error message is displayed                                   | false  |
+| User pays -> backend returns success                               | Success page is displayed                                    | false  |
 
 ## Unit level
+
+You can test nearly everything here with unit tests. And you should! You should think of every edge case possible. Think of every possible error that can happen, every possible user behaviour. What if user tries to open empty product cart? What if he removes all the items from the cart? What if he clicks pay button twice? Those are questions that should fill your mind.
+
+As for practical example, let me show how I would write a discount function.
 
 ## Functional level
 
