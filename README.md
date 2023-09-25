@@ -271,71 +271,79 @@ Short recap of what we did:
 
 ## Functional level
 
-To write our functional tests, we need to zoom out and look at our example from bird view.
+To write our functional tests, you need to zoom out and look at our example from bird view. You don't need to go in details, while testing on functional level, but you shouldn't be afraid of double testing some functionality that you already tested on a lower level.
+
+What I would focus on here, is:
+
+- Happy Flow - User makes successful payment. In the same test you can test validation.
+- Happy Flow with discount
+- Error flow on catalog, cart, checkout, and payment page
+
+This should be enough to be reasonably sure that integration between all parts of the application is successful.
 
 `Example picture`
+
+## Functional level (Happy flow example)
+
+How can you write test without having anything to test. There where wishful thinking coming to help. This is an approach of testing, when you use functionality that you have not yet written. Let's see how it works.
+
+`Test without anything`
+
+First step of the test, would be to load the catalog page.
+
+---
+
+We use Catalog class, which doesn't exist yet. And call non-existing loadPage method. Because we wish it to be there. You can actually create this class and test, and make it always fail. Then when functionality is being added, you can fix all the failing tests.
+
+`Test with Catalog.loadPage method`
+
+The catalog should display products.
+
+---
+
+`Test with Catalog.showsProduct method`
+
+Header cart should show "no products" message, because it is empty.
+
+---
+
+`Test with HedaerCart.shows('No products')`
+
+When user adds a product, header cart should show counter and total price.
+
+---
+
+`Test with one product in cart`
+
+
+When user adds several more products, header cart should be updated
+
+---
+
+`Test with 3 products in the cart`
+
+When user clicks on header cart, products cart page should be shown 
+
+---
+
+`Test with products cart`
+
+When user modifies products amount, total price should be updated
+
+---
+
+`Test with updated amount of products in products cart`
+
+When user goes to checkout, submits a form and pays, success page should be displayed.
+
+---
+
+`Complete test`
 
 ## E2E level
 
 You might wonder why when we have essentially the same test on functional level, we don't test all the details on E2E level. The reason lies in faster feedback, higher flexibility and less complexity from functional tests. The simpler you keep your E2E tests, the easier is to maintain them.
-## Unit level (OLD)
-
-Unit tests are the foundation of your testing strategy. 
-They are cheap, fast, inexpensive.
-This allows us to cover as much edge cases as we want.
-
-There are multiple tools you can use for that, the list you see on the slide is not exclusive.
-
-
-`Example of unit level function`
-
-Let's go to the example. Imagine that we have following function, which is calculating the discount based on the price which we have provided.
-
-`List of unit test requiremements`
-
-So what I would expect to test:
-
-- That discount is correctly applied in respective price range. Including edge cases.
-- That it throws an error if we provide unexpected parameters.
-
-`Example of modified unit level function that fails`
-
-`Example of modified unit level function that passes`
-
-And now we can safely modify that function without any fear of it breaking. 
-Because we know that test will check all functionality of this function each time that we are making any change.
-
-## Functional level (OLD)
-
-
-![Web shop example photo](./WebShop.png)
-
-While unit tests are focusing on a piece of the code, functional tests are checking your whole application. 
-
-To make an example, let's imagine that we have a webshop. 
-You should have already covered all the edge cases in your unit tests.
-
-And now we just want to see that integration of all those pieces of the code, which makes your application, are working fine.
-
-We want to focus on our application at this moment, so we mock API calls. 
-
-I would write several tests to prove that integration between those components works:
-
-- **Happy flow:** User can login, add product to the basket, complete checkout, pays and see success payment page.
-- **Error login flow:** When user logins, error message should appear if backend fails with an error and user should be stopped.
-- **Basket failure flow:** When user adds product to busket, error message should appear if backend fails with an error and user should be able to try again.
-- **Checkout failture flow:** When user submits checkout form, error message should appear if backend fails with an error and user should be able to try again.
-- **Payment failure flow:** When user tries to pay, error message should appear if he doesn't have enough money.
-
-## E2E level (OLD)
-
-Finally, we have to be sure that our application is successfully integrated with API, and whole system is working properly together. 
-This is the most expensive, but absolutely necessary part of our testing strategy.
-
-In our example from above, we would have to test only HappyFlow, since login page till SuccessScreen. 
-
-It will prove that connection between all the parties is estabilished.
 
 ## QA time
 
-Thank you for your attention. I will now open the floor for a Q&A session. If you think of questions later or want a deeper discussion, I will be around for the entirety of the meetup, so please feel free to approach me. Additionally, I will be posting slides of this presentation in the meetup comments for reference. If you'd like to connect or discuss further, I will also share my LinkedIn profilethere. Looking forward to your questions and further interractions.
+Thank you for your attention. Now the floor opens for a Q&A session. If you think of questions later or want a deeper discussion, I will be around for the entirety of the meetup, so please feel free to approach me. Additionally, I will be posting slides of this presentation in the meetup comments for reference. If you'd like to connect or discuss further, I will also share my LinkedIn profile there. Looking forward to your questions and further interractions.
