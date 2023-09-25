@@ -340,9 +340,11 @@ When user goes to checkout, submits a form and pays, success page should be disp
 
 `Complete test`
 
+Now we have complete happy flow, that will guide you through your development process.
+
 ## E2E level
 
-You might wonder why when we have essentially the same test on functional level, we don't test all the details on E2E level. The reason lies in faster feedback, higher flexibility and less complexity from functional tests. The simpler you keep your E2E tests, the easier is to maintain them.
+
 
 ## QA time
 
