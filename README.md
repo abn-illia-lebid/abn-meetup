@@ -126,21 +126,33 @@ Let's imagine that we are developing a webshop and see with this example how we 
 
 ### Traceability matrix
 
-First we define the requirements. 
+First we define the requirements. Usually traceability matrix is split per page of the application. So we have traceability matrix for catalog, product cart, checkout, and payment.
 
-| Action                                                             | Result                                                       | Tested |
-|--------------------------------------------------------------------|--------------------------------------------------------------|--------|
-| User adds a product to product cart                                | Product cart counter is updated                              | false  |
-| User opens catalog                                                 | List of products is updated                                  | false  |
-| User opens product cart                                            | Products that are in user's product cart are displayed       | false  |
-| Product cart's total price is higher than 1000                     | 10% discount is applied                                      | false  |
-| Product cart's total price is less or equal than 1000              | No discount is applied                                       | false  |
-| User goes to checkout                                              | Checkout form is displayed                                   | false  |
-| User doesn't fills anything in checkout and submits form           | Validation messages are displayed, and form is not submitted | false  |
-| User fills checkout form and submits it -> backend returns error   | Error message is displayed                                   | false  |
-| User fills checkout form and submits it -> backend returns success | Payment page is displayed                                    | false  |
-| User pays -> backend returns error                                 | Error message is displayed                                   | false  |
-| User pays -> backend returns success                               | Success page is displayed                                    | false  |
+Let's briefly go through all of the requirements, to see how you approach the traceability matrix.
+
+----
+
+**Catalog**
+
+On catalog we care that products are displayed, header cart is working properly, and errors are handled.
+
+---
+
+**Product cart**
+
+On product cart we need to render dynamic total price, allow user to change amount of products, apply or disable discounts depending on the total price, make sure that all the changes are persistent and handle errors.
+
+---
+
+**Checkout**
+
+Checkout is a basic form, so it should be validated properly. User should be able to submit it. And errors should be handled.
+
+---
+
+**Payment**
+
+On payment step we care that users can successfully pay for the product, and if they cannot, they would be properly notified.
 
 ## Unit level
 
@@ -148,7 +160,120 @@ You can test nearly everything here with unit tests. And you should! You should 
 
 As for practical example, let me show how I would write a discount function.
 
+---
+
+First step would be to write tests. In other words to define the requirements to the function.
+
+We expect to get no discount if price is less than 1000Euro and 10% discount is price is more than 1000Euro. Also if price argument is not provided, the function should throw an error.
+
+If you look below the function, you will see the console where we call our function with 10Euro price. It is returning undefined now.
+
+`Unit function with 3/3 failing tests and 10Euro as a parameter`
+
+Let's return unchanged price from the function.
+
+---
+
+First test is passing. We also see that if we call function with 10Euro, we get an expected result. But two other tests are still failing.
+
+`Unit function with 2/3 failing tests and 10Euro as a parameter`
+
+---
+
+Now if we call the function with 5000Euro as a parameter, we also get unchanged price.
+
+`Unit function with 2/3 failing tests and 5000Euro as a parameter`
+
+Let's apply discount if the price is higher than 1000Euro.
+
+---
+
+Second test is passing now. And discount is successfully applied to the price we provided.
+
+`Unit function with 1/3 failing test and 5000Euro as a parameter`
+
+---
+
+If we don't pass a price parameter, then we receive undefined instead of expected error.
+
+`Unit function with 1/3 failing test and no parameters`
+
+Let's fix it.
+
+---
+
+Now you see that all tests are passing, and function is throwing expected error.
+
+`Unit function with 0/3 failing tests and no parameters`
+
+Time to break the code and tests. What will happen if I pass string instead of number as a parameter?
+
+---
+
+It will return unchanged string.
+
+`Unit function with 0/3 failing tests and string parameter`
+
+That is unexpected behaviour. We should add additional test case. Function should throw an error if non-numeric parameter has been passed.
+
+---
+
+It fails. Good.
+
+`Unit function with 1/4 failing tests and string parameter`
+
+Let's fix it.
+
+---
+
+Now function is throwing an error and all tests are passing.
+
+`Unit function with 0/4 failing tests and string parameter`
+
+Can we break something else? We see edge case in 'if' statement.
+
+---
+
+Let's pass 1000Euro to the function. It applies discount. What will happen if we remove equal sign from 'if' statement?
+
+`Unit function with 0/4 failing tests and 1000Euro as a parameter, discount is applied`
+
+---
+
+Discount is not applied now, but no test is failing. We have two different behaviours which pass all the tests. Clear sign that we need an additional test case.
+
+`Unit function with 0/4 failing tests and 1000Euro as a parameter, discount is not applied`
+
+---
+
+Now the when the test is indicating the problem.
+
+`Unit function with 1/5 failing tests and 1000Euro as a parameter, discount is not applied`
+
+Let's fix it.
+
+---
+
+Now we have properly tested function on a unit level.
+
+`Unit function with 0/5 failing tests and 1000Euro as a parameter, discount is applied`
+
+Short recap of what we did:
+
+- We defined requirements to the function
+- Wrote the failing tests
+- Passed the tests
+- Found missed requirement
+- Added a failing test case and fixed it.
+- Broke the code without failing tests
+- Added additional failing test case
+- Fixed it
+
 ## Functional level
+
+To write our functional tests, we need to zoom out and look at our example from bird view.
+
+`Example picture`
 
 ## E2E level
 
