@@ -124,9 +124,13 @@ Let's imagine that we are developing a webshop and see with this example how we 
 
 [Wireframe](https://wireframe.cc/PuuV02)
 
+### Pipeline and static tests
+
+First step would be to setup pipeline and static tests. It is one time investment, so once you are done, you will need to make only minor adjustments over lifetime of your application.
+
 ### Traceability matrix
 
-First we define the requirements. Usually traceability matrix is split per page of the application. So we have traceability matrix for catalog, product cart, checkout, and payment.
+Then we define the requirements. Usually traceability matrix is split per page. So we have traceability matrix for catalog, product cart, checkout, and payment.
 
 Let's briefly go through all of the requirements, to see how you approach the traceability matrix.
 
