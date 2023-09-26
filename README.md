@@ -154,7 +154,7 @@ Checkout is a basic form, so it should be validated properly. User should be abl
 
 On payment step we care that users can successfully pay for the product, and if they cannot, they would be properly notified.
 
-## Unit level
+### Unit level
 
 You can test nearly everything here with unit tests. And you should! You should think of every edge case possible. Think of every possible error that can happen, every possible user behaviour. What if user tries to open empty product cart? What if he removes all the items from the cart? What if he clicks pay button twice? Those are questions that should fill your mind.
 
@@ -344,7 +344,7 @@ Now we have complete happy flow, that will guide you through your development pr
 
 ## E2E level
 
-
+It is the best to keep E2E tests as simple as possible. So in our case, we just have happy flow.
 
 ## QA time
 
