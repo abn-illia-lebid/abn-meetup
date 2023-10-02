@@ -1,8 +1,8 @@
 # Full-Proof Testing: A Guide To Predicable Application
 
-## Why
+## Story time
 
-Nice to see you! I am Illia. 
+Let me tell you a story!
 
 Long time ago, I was working as a freelancer. During that time, I didn't know yet what testing is.
 
@@ -10,37 +10,19 @@ When I was finishing my project, I was sending it to the client. I rested few da
 
 Then, I discovered E2E testing. It was a breathe of the air. I would set test to look closely if main functionality of the project is still working. And each time I killed a bug, I set new test, to watch for his re-appearence. Amount of bugs decreased, they became easier to fight. And they stopped coming back. My client was happy. But as the project growed, E2E tests became a heavy burden. Their slow nature and big demands dragged me down. Each time I made small changes to the project, I had to wait for hours. I also had to always run a copy of the backend, and maintain complex system on my laptop.
 
-I decided that this was enough for me. My first step was to remove the backend from my tests. I replaced it with mock server, and as a result, I got Functional tests. Now they were testing most of the functionality of my application, and E2E tests were guarding only the connection to the backend. It made the testing system simpler, and saved me several hours each time I introduced changes.
+I decided that this was enough for me. My first step was to remove the backend from most of my tests. I replaced it with mock server, and as a result, I got Functional tests. Now they were testing most of the functionality of my application, and E2E tests were guarding only the connection to the backend. It made the testing system simpler, and saved me several hours each time I introduced changes.
 
 But I wanted more! It was not enough for me So I started writting unit tests. I was settings small tests everywhere in the code, and bugs didn't have any place to hide. Those tests were extremely fast and didn't eat much. I was still using Functional and E2E tests to ensure that the integration between parts of the application and external services is still working as expected. Now, I was able to catch most of the bugs in minutes, and the most evasive ones were caught less than in ten minutes.
 
 ## Me and IDeal
 
-Currently I am working on iDeal as a frontend developer in ABN Amro. Our testing system became even more advanced, and having her in place allows me to sleep peacefully at night.
+Good evening! My name is Illia. 
 
-## Plan for the session
+And currently I am working in ABN AMRO on iDeal as a frontend developer. Our testing system is even more advanced, and having it in place allows me to sleep peacefully at night.
 
-During following 20 minutes I will:
+## Full proof testing
 
-`List item #1 - Testing pyramid` - Then I will speak about Testing Pyramid, the logic behind it, and will briefly cover other testing methods.  
-
-`List item #2 - Types of tests` - I will cover shortly most used types of tests, and explain why and when you might want to use them.
-
-`List item #3 - Traceability matrix` - I will explain what is Traceability Matrix and how it helps you to gain confidence in your tests.
-
-`List item #4 - Unit tests`
-
-`List item #5 - Functional tests`
-
-`List item #6 - E2E tests` - I will cover in depth difference between Unit, Functional and E2E tests, and provide examples.
-
-`List item #7 - Integration with pipeline` - After that I will speak about the importance of integrating tests with the pipeline.
-
-`List item #8 - Breaking the tests` - I will explain how breaking the tests helps you to make them stronger.
-
-`List item #9 - Test Driven Development` - I will cover Test Driven Development, and show with example how it makes tests human readable.
-
-`List item #10 - Questions` - After that I will be open to questions or maybe suggestions.
+Today, I will speak about testing. I will show you which types of tests there are. I will explain different testing methods and their benefits. And I will finish the presentation with practical example.
 
 ## Types of tests
 
