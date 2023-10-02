@@ -32,13 +32,13 @@ There are multiple species of bugs. And to catch them all, you need different we
 - **Functional tests** - are testing your whole application in isolation from external services
 - **E2E tests** - are focusing on integration between your application and external services
 - **Accessibility tests** check for common problems that may make it difficult for users with disabilities to use your website.
-- **Performance tests** will explain you how much time user will take to load the page, how bad network will affect his experience, and what is the load on his processor
-- **Mutation tests** will randomly generate bugs in your code to check your tests can spot them. Basically they test your tests.
-- **Contract tests** are checking that agreement between your frontend and backend is still correct.
+- **Performance tests** will explain you how much time user will take to load the page, how bad network will affect his experience, and what is the load on his processor.
+- **Mutation tests** will randomly generate bugs in your code to check if your tests can spot them. Basically they test your tests.
+- **Contract tests** are checking that agreement between your frontend and backend is still correct. In constrast to E2E tests, they are fast and executed on unit level.
 - **Memory leakage tests** as the name suggests helps you to find memory leaks in your application. If expected session time of your users is long, that is something you definitely want to test for.
-- **Snapshots tests** compares confirmed html output with new version. Helps you spot unexpected UI changes.
+- **Snapshots tests** compares confirmed html output with new version. It helps you spot unexpected UI changes.
 - **Security tests** checks your code for vulnerabilities.
-- **Code quality tests** helps you to ensure same code style withing a team or organisation. Also shows you common mistakes and problems in your codebase.
+- **Code quality tests** helps you to ensure same code style withing a team or organisation. Also it shows you common mistakes and problems in your codebase.
 
 ## Testing methods
 
@@ -62,7 +62,7 @@ You can also setup contracts tests, which would be of a great help. But for that
 
 If unit tests didn't help, use Functional. They are here to ensure correct communication between parts of your application.
 
-And E2E tests will let you know that you application is still producing correct result when it connects to the backend. Be careful with them.
+And E2E tests will let you know that you application is still producing correct result when it connects to the backend.
 
 As a last resort, if nothing else helps. Add a test case to your manual testing plan. But be prepared to spend a lot of time in a long run.
 
@@ -99,6 +99,8 @@ What if you forget to run your automated tests and deploy untested application t
 Worry not, because when you include the tests into the pipeline, they will be run automatically.
 
 The pipeline will also automate the deployment to production. Which gives you even more safety and less headache.
+
+You will never be able to deploy untested application again. 
 
 ## An example
 
@@ -240,7 +242,7 @@ Let's fix it.
 
 ---
 
-Now we have properly tested function on a unit level.
+Finally, we have properly tested function on a unit level.
 
 `Unit function with 0/5 failing tests and 1000Euro as a parameter, discount is applied`
 
@@ -261,7 +263,7 @@ To write our functional tests, you need to zoom out and look at our example from
 
 What I would focus on here, is:
 
-- Happy Flow - User makes successful payment. In the same test you can test validation.
+- Happy Flow without discount - User makes successful payment. In the same test you can test validation.
 - Happy Flow with discount
 - Error flow on catalog, cart, checkout, and payment page
 
@@ -330,8 +332,8 @@ Now we have complete happy flow, that will guide you through your development pr
 
 ## E2E level
 
-It is the best to keep E2E tests as simple as possible. So in our case, we just have happy flow.
+And last step: E2E tests. It is the best to keep them as simple as possible. So in our case, we just have happy flow.
 
 ## QA time
 
-Thank you for your attention. Now the floor opens for a Q&A session. If you think of questions later or want a deeper discussion, I will be around for the entirety of the meetup, so please feel free to approach me. Additionally, I will be posting slides of this presentation in the meetup comments for reference. If you'd like to connect or discuss further, I will also share my LinkedIn profile there. Looking forward to your questions and further interractions.
+Thank you for your attention. Now the floor opens for a Q&A session. If you think of questions later or want a deeper discussion, I will be around for the entirety of the meetup, so please feel free to approach me. If you'd like to connect or discuss further, I will also share my LinkedIn profile there. Looking forward to your questions and further interractions.
