@@ -46,15 +46,11 @@ There are multiple species of bugs. And to catch them all, you need different we
 
 Weapons are useless if you don't use them properly. Let me tell you about some handy approaches:
 
-- **Testing pyramid**
-- **Traceability matrix**
-- **Test driven development**
-- **Breaking the tests**
-- **Integration with the pipeline**
-
 ## Testing Pyramid
 
-As my story told, tests can be quite expensive. You have to use them sparingly.
+As my story told, tests can be quite expensive. You have to use them sparingly. 
+
+Hense Testing Pyramid is coming into play. It helps you to set correct priorities, and keep the feedback loop as short as possible.
 
 I would start with static tests. It is an one time investment. Once you setup them, they will give you advices during whole life of your application.
 
