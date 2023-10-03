@@ -42,10 +42,6 @@ There are multiple species of bugs. And to catch them all, you need different we
 - **Security tests** checks your code for vulnerabilities.
 - **Code quality tests** helps you to ensure same code style withing a team or organisation. Also it shows you common mistakes and problems in your codebase.
 
-## Testing methods
-
-Weapons are useless if you don't use them properly. Let me tell you about some handy approaches:
-
 ## Testing Pyramid
 
 As my story told, tests can be quite expensive. You have to use them sparingly. 
