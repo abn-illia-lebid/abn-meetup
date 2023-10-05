@@ -267,7 +267,7 @@ This should be enough to be reasonably sure that integration between all parts o
 
 ## Functional level (Happy flow example)
 
-How can you write test without having anything to test. There where wishful thinking coming to help. This is an approach of testing, when you use functionality that you have not yet written. Let's see how it works.
+How can you write test without having anything to test. There where wishful thinking coming to help. This is an approach of coding, when you use functionality that you have not yet written. Let's see how it works.
 
 `Test without anything`
 
