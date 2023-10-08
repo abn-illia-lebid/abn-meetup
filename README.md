@@ -329,4 +329,4 @@ And last step: E2E tests. It is the best to keep them as simple as possible. So 
 
 ## QA time
 
-Thank you for your attention. Now the floor opens for a Q&A session. If you think of questions later or would like to delve deeper into any topic, I will be available throughout the meetup. Please feel free to approach me. If you'd like to connect or discuss further, I will also share my LinkedIn profile there. Looking forward to your questions and further interractions.
+Thank you for your attention. Now the floor opens for a Q&A session. If you think of questions later or would like to delve deeper into any topic, I will be available throughout the meetup. Please feel free to approach me. If you'd like to connect or discuss further, I will also share my LinkedIn profile there. Looking forward to your questions and further interactions.
