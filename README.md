@@ -156,13 +156,13 @@ As for practical example, let me show how I would write a discount function.
 
 First step would be to write tests. In other words to define the requirements to the function.
 
-We expect to get no discount if price is less than 1000Euro and 10% discount is price is more than 1000Euro. Also if price argument is not provided, the function should throw an error.
+We expect to get no discount if price is less than 1000Euro and 10% discount is price is more than 1000Euro. Also, if price argument is not provided, the function should throw an error.
 
-If you look below the function, you will see the console where we call our function with 10Euro price. It is returning undefined now.
+If you look below the function, you will see the console where we call our function with 10Euro price. It is currently returning undefined now.
 
 `Unit function with 3/3 failing tests and 10Euro as a parameter`
 
-Let's return unchanged price from the function.
+Let's return the unchanged price from the function.
 
 ---
 
