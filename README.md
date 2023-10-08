@@ -256,7 +256,7 @@ Short recap of what we did:
 - Wrote the failing tests
 - Passed the tests
 - Found missed requirement
-- Added a failing test case and fixed it.
+- Added a failing test case and then fixed it.
 - Broke the code without failing tests
 - Added additional failing test case
 - Fixed it
