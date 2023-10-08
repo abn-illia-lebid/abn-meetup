@@ -250,7 +250,6 @@ Finally, we have properly tested function on a unit level. This tedious process 
 
 `Unit function with 0/5 failing tests and 1000Euro as a parameter, discount is applied`
 
-
 ## Functional level
 
 To write our functional tests, you need to zoom out and look at our example from bird view. You don't need to go in details, while testing on functional level, but you shouldn't be afraid of double testing some functionality that you already tested on a lower level.
