@@ -72,11 +72,11 @@ As a last resort, if nothing else works, add a test case to your manual testing 
 
 ## Traceability matrix
 
-Before you start to test anything. You should understand what is expected from your application. As you gather all your requirements, you keep track of their testing status using traceability matrix.
+Before you start to test anything, you should understand what is expected from your application. As you gather all your requirements, keep track of their testing status using traceability matrix.
 
-More often than not, if you found a bug, you missed some requirement in the initial stage. So each time you find a bug, check the traceability matrix and update it accordingly.
+More often than not, if you find a bug, it means you missed some requirement in the initial stage. So each time you find a bug, check the traceability matrix and update it accordingly.
 
-Another advantage of traceability matrix, is that your clients or stackeholders without technical knowledge will be able to read them.
+Another advantage of a traceability matrix is that even clients or stakeholders without technical knowledge will be able to read them.
 
 `Traceability matrix`
 
