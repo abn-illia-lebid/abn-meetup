@@ -38,7 +38,7 @@ To test individual pieces of code, you can use **Unit tests**. They are fast and
 
 We strive for inclusivity and want everybody to have equal access to information. **Accessibility tests** will help you to find common problems that make life even more difficult for people with disabilities.
 
-How much time a user will take to load the page? How a poor network connection will affect their experience? How your site behaves on weak and powerful devices? Only **Performance tests** will give you the answer.
+How much time will a user take to load the page? How a poor network connection will affect their experience? How your site behaves on weak and powerful devices? Only **Performance tests** will give you the answer.
 
 Tests help you to gain trust in your code. But how can you trust your tests? **Mutation tests** will generate artificial bugs to check if your tests can spot them. Basically they will test your tests.
 
@@ -50,7 +50,7 @@ While other tests are testing functionality of the application, **Snapshot tests
 
 You definitely don't want to neglect security. While regular bugs give constant irritation, security issues sit still and hidden, ready to cause devastating damage when the moment arises. **Security tests** will constantly scan your code for vulnerabilities.
 
-We care a lot about our users, but we should not forget about ourselves, developers. **Code quality tests** ensure the same code style within a team or organisation, show you common mistakes and problems in your codebase. Thus speeding up development process and making decision burden on developers lighter.
+We care a lot about our users, but we should not forget about ourselves, developers. **Code quality tests** ensure the same code style within a team or organisation, show you common mistakes and problems in your codebase. Thus speeding up development process and lightening decision-making burden on developers.
 
 ## Testing Pyramid
 
