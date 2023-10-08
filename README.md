@@ -206,7 +206,7 @@ It will return unchanged string.
 
 `Unit function with 0/3 failing tests and string parameter`
 
-Thit is unexpected behaviour. We should add additional test case. Function should throw an error if non-numeric parameter has been passed.
+This is unexpected behaviour. We should add additional test case. Function should throw an error if non-numeric parameter has been passed.
 
 ---
 
