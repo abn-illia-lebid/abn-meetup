@@ -238,7 +238,7 @@ Discount is not applied now, but no test is failing. We have two different behav
 
 ---
 
-Now the when the test is indicating the problem.
+Now, when the test is indicating the problem.
 
 `Unit function with 1/5 failing tests and 1000Euro as a parameter, discount is not applied`
 
