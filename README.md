@@ -148,7 +148,7 @@ On the payment step we care that users can successfully pay for the product, and
 
 ### Unit level
 
-You can test nearly everything here with unit tests. And you should! You should think of every edge case possible. Think of every possible error that can happen, every possible user behaviour. What if user tries to open empty product cart? What if he removes all the items from the cart? What if he clicks pay button twice? Those are questions that should fill your mind.
+You can test nearly everything here with unit tests. And you should! You should think of every edge case possible. Think of every possible error that can happen, every possible user behaviour. What if a user tries to open empty product cart? What if they remove all the items from the cart? What if they click pay button twice? Those are questions that should fill your mind.
 
 As for practical example, let me show how I would write a discount function.
 
