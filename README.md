@@ -114,7 +114,7 @@ Let's imagine that we are developing a webshop and use this example to see how w
 
 ### Pipeline and static tests
 
-First step would be to setup pipeline and static tests. It is a one-time investment, so once you are done, you will need to make only minor adjustments over lifetime of your application.
+First step would be to setup pipeline and static tests. It is a one-time investment, so once you are done, you will need to make only minor adjustments over the lifetime of your application.
 
 ### Traceability matrix
 
