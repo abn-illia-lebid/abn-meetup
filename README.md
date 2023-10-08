@@ -58,7 +58,7 @@ As my story told, tests can be quite expensive. You have to use them sparingly.
 
 Hence Testing Pyramid comes into play. It helps you to set the correct priorities, and keep the feedback loop as short as possible.
 
-I would start with static tests. It is a one-time investment. Once you set them up, they will offer advice throught the lifespan of your application.
+I would start with static tests. It is a one-time investment. Once you set them up, they will offer advice throughout the lifespan of your application.
 
 Unit tests are the fastest and least demanding. Don't be greedy with them.
 
