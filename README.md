@@ -20,13 +20,11 @@ I was still using Functional and E2E tests to ensure that the integration betwee
 
 ## Me and IDeal
 
-Good evening! My name is Illia. 
-
-And currently I am working in ABN AMRO on iDeal as a frontend developer. Our testing system is even more advanced, and having it in place allows me to sleep peacefully at night.
+Good evening! My name is Illia, and I am currently working as a frontend developer on iDeal at ABN AMRO. Our testing system is even more advanced, and having it in place allows me to sleep peacefully at night.
 
 ## Full proof testing
 
-Today, I will speak about testing. I will show you which types of tests there are. I will explain different testing methods and their benefits. And I will finish the presentation with practical example.
+Today, I will speak about testing, show you different types of tests, and explain various testing methods and their benefits, finishing the presentation with a practical example.
 
 ## Types of tests
 
