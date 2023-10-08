@@ -232,7 +232,7 @@ Let's pass 1000Euro to the function. It applies discount. What will happen if we
 
 ---
 
-Discount is not applied now, but no test is failing. We have two different behaviours which pass all the tests. Clear sign that we need an additional test case.
+Discount is not applied now, but no test is failing. We have two different behaviours which pass all the tests. A clear sign that we need an additional test case.
 
 `Unit function with 0/4 failing tests and 1000Euro as a parameter, discount is not applied`
 
