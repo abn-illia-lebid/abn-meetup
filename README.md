@@ -132,7 +132,7 @@ On the catalog we care that products are displayed, the header cart is working p
 
 **Product cart**
 
-On product cart we need to render dynamic total price, allow user to change amount of products, apply or disable discounts depending on the total price, make sure that all the changes are persistent and handle errors.
+On the product cart we need to render dynamic total price, allow the user to change amount of products, apply or disable discounts depending on the total price, make sure that all the changes are persistent, and handle errors.
 
 ---
 
