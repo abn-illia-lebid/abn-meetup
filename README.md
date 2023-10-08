@@ -194,7 +194,7 @@ Let's fix it.
 
 ---
 
-Now you see that all tests are passing, and function is throwing the expected error.
+Now you see that all tests are passing, and the function is throwing the expected error.
 
 `Unit function with 0/3 failing tests and no parameters`
 
