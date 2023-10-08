@@ -246,20 +246,10 @@ Let's fix it.
 
 ---
 
-Finally, we have properly tested function on a unit level.
+Finally, we have properly tested function on a unit level. This tedious process of writing tests, writing code, trying to break it, check for missed requirements, adding missing tests, and fixing the code gives us test that we can trust and rely on.
 
 `Unit function with 0/5 failing tests and 1000Euro as a parameter, discount is applied`
 
-Short recap of what we did:
-
-- We defined requirements to the function
-- Wrote the failing tests
-- Passed the tests
-- Found missed requirement
-- Added a failing test case and fixed it.
-- Broke the code without failing tests
-- Added additional failing test case
-- Fixed it
 
 ## Functional level
 
