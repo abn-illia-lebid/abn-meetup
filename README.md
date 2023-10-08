@@ -118,7 +118,7 @@ First step would be to setup pipeline and static tests. It is a one-time investm
 
 ### Traceability matrix
 
-Then we define the requirements. Usually traceability matrix is split per page. So we have traceability matrix for catalog, product cart, checkout, and payment.
+Then we define the requirements. Usually, traceability matrix is split per page. So we have traceability matrix for catalog, product cart, checkout, and payment.
 
 Let's briefly go through all of the requirements, to see how you approach the traceability matrix.
 
