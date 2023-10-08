@@ -108,7 +108,7 @@ You will never be able to deploy an untested application again.
 
 ## An example
 
-Let's imagine that we are developing a webshop and see with this example how we should approach its testing.
+Let's imagine that we are developing a webshop and use this example to see how we should approach its testing.
 
 [Wireframe](https://wireframe.cc/PuuV02)
 
