@@ -186,7 +186,7 @@ The second test is passing now. And the discount is successfully applied to the 
 
 ---
 
-If we don't pass a price parameter, then we receive undefined instead of expected error.
+If we don't pass a price parameter, then we receive undefined instead of the expected error.
 
 `Unit function with 1/3 failing test and no parameters`
 
@@ -194,7 +194,7 @@ Let's fix it.
 
 ---
 
-Now you see that all tests are passing, and function is throwing expected error.
+Now you see that all tests are passing, and function is throwing the expected error.
 
 `Unit function with 0/3 failing tests and no parameters`
 
