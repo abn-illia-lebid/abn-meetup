@@ -34,7 +34,7 @@ To test individual pieces of code, you can use **Unit tests**, they are fast and
 
 **Functional tests** on the other hand don't care about your code, and test your whole application.
 
-**E2E tests** are heavy and demanding. But only they can mimic soul of the user. Their main usage is to ensure that application is working in harmony with your backend and external services.
+**E2E tests** are heavy and demanding. But only they can mimic soul of the user. Their main application is to ensure that application is working in harmony with your backend and external services.
 
 We strive for inclusivity and want everybody have equal access to information. **Accessibility tests** will help you to find common problems that makes life even more difficult for people with disabilities.
 
