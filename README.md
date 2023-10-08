@@ -126,7 +126,7 @@ Let's briefly go through all of the requirements, to see how you approach the tr
 
 **Catalog**
 
-On catalog we care that products are displayed, header cart is working properly, and errors are handled.
+On the catalog we care that products are displayed, the header cart is working properly, and errors are handled.
 
 ---
 
