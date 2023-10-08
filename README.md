@@ -82,9 +82,9 @@ Another advantage of a traceability matrix is that even clients or stakeholders 
 
 ## Test Driven Development
 
-Egg or chicken question. What should come first? Tests or code. 
+The Egg or the chicken question. Should tests come first or code? 
 
-If you look closely, you will see that tests are direct requirements for code. Better let the requirements to shape the code, then otherwise. This approach will also give you human readable tests, will prevent you from writting reduntant code. And main principle (Red -> Green -> Refactor) will give you additional confidence in the tests.
+If you look closely, you will see that tests are direct requirements for code. Better to let the requirements shape the code, then other way around. This approach will also give you human-readable tests and will prevent you from writing reduntant code. And main principle (Red -> Green -> Refactor) will give you additional confidence in the tests.
 
 ## Breaking the tests
 
