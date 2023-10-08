@@ -252,13 +252,13 @@ Finally, we have properly tested function on a unit level. This tedious process 
 
 ## Functional level
 
-To write our functional tests, you need to zoom out and look at our example from bird view. You don't need to go in details, while testing on functional level, but you shouldn't be afraid of double testing some functionality that you already tested on a lower level.
+To write our functional tests, you need to zoom out and look at our example from a bird's-eye view. You don't need to go in details, while testing on functional level, but you shouldn't be afraid of double testing some functionality that you already tested on a lower level.
 
 What I would focus on here, is:
 
 - Happy Flow without discount - User makes successful payment. In the same test you can test validation.
 - Happy Flow with discount
-- Error flow on catalog, cart, checkout, and payment page
+- Error flow on the catalog, cart, checkout, and payment page
 
 This should be enough to be reasonably sure that integration between all parts of the application is successful.
 
