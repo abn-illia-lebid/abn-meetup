@@ -96,15 +96,15 @@ Break the code! Break the application! Introduce an unexpected change! Do whatev
 
 Were you not able to do it? Well, then you can trust your tests.
 
-## Integration with pipeline
+## Integration with the pipeline
 
-What if you forget to run your automated tests and deploy untested application to production?
+What if you forget to run your automated tests and deploy an untested application to production?
 
 Worry not, because when you include the tests into the pipeline, they will be run automatically.
 
-The pipeline will also automate the deployment to production. Which gives you even more safety and less headache.
+The pipeline will also automate the deployment to production, which gives you even more safety and less headache.
 
-You will never be able to deploy untested application again. 
+You will never be able to deploy an untested application again. 
 
 ## An example
 
