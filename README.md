@@ -126,7 +126,7 @@ Let's briefly go through all of the requirements, to see how you approach the tr
 
 **Catalog**
 
-On the catalog we care that products are displayed, the header cart is working properly, and errors are handled.
+On the catalog we care that products are displayed. The header cart is working properly. And errors are handled.
 
 ---
 
@@ -144,7 +144,7 @@ Checkout is a basic form, so it should be validated properly. The user should be
 
 **Payment**
 
-On payment step we care that users can successfully pay for the product, and if they cannot, they would be properly notified.
+On the payment step we care that users can successfully pay for the product, and if they cannot, they would be properly notified.
 
 ### Unit level
 
