@@ -154,7 +154,7 @@ As for practical example, let me show how I would write a discount function.
 
 ---
 
-First step would be to write tests. In other words to define the requirements to the function.
+The first step would be to write tests. In other words to define the requirements to the function.
 
 We expect to get no discount if price is less than 1000Euro and 10% discount is price is more than 1000Euro. Also, if price argument is not provided, the function should throw an error.
 
@@ -166,7 +166,7 @@ Let's return the unchanged price from the function.
 
 ---
 
-First test is passing. We also see that if we call function with 10Euro, we get an expected result. But the two other tests are still failing.
+The first test is passing. We also see that if we call function with 10Euro, we get an expected result. But the two other tests are still failing.
 
 `Unit function with 2/3 failing tests and 10Euro as a parameter`
 
@@ -180,7 +180,7 @@ Let's apply discount if the price is higher than 1000Euro.
 
 ---
 
-Second test is passing now. And discount is successfully applied to the price we provided.
+The second test is passing now. And discount is successfully applied to the price we provided.
 
 `Unit function with 1/3 failing test and 5000Euro as a parameter`
 
