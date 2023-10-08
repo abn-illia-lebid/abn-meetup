@@ -30,27 +30,27 @@ Today, I will speak about testing, show you different types of tests, and explai
 
 There are multiple species of bugs. And to catch them all, you need different weapons. Let me tell you about them.
 
-To test individual pieces of code, you can use **Unit tests**, they are fast and reliable.
+To test individual pieces of code, you can use **Unit tests**. They are fast and reliable.
 
-**Functional tests** on the other hand don't care about your code, and test your whole application.
+**Functional tests**, on the other hand don't care about your code, and test your whole application.
 
-**E2E tests** are heavy and demanding. But only they can mimic soul of the user. Their main usage is to ensure that application is working in harmony with your backend and external services.
+**E2E tests** are heavy and demanding. But only they can mimic the soul of the user. Their main usage is to ensure that application is working in harmony with your backend and external services.
 
-We strive for inclusivity and want everybody have equal access to information. **Accessibility tests** will help you to find common problems that makes life even more difficult for people with disabilities.
+We strive for inclusivity and want everybody to have equal access to information. **Accessibility tests** will help you to find common problems that make life even more difficult for people with disabilities.
 
-How much time a user will take to load the page, how a poor network connection will affect their experience, how would your site behave on weak and powerful devices. Only **Performance tests** will give you the answer.
+How much time a user will take to load the page? How a poor network connection will affect their experience? How your site behaves on weak and powerful devices? Only **Performance tests** will give you the answer.
 
 Tests help you to gain trust in your code. But how can you trust your tests? **Mutation tests** will generate artificial bugs to check if your tests can spot them. Basically they will test your tests.
 
-You can also test connection between backend and frontend with the help of **Contract tests**. They slightly less reliable than **E2E** tests, and require cooperation between all the teams that work on application, but are much much much faster! 
+You can also test the connection between backend and frontend with the help of **Contract tests**. They are less powerful than **E2E** tests, and require cooperation between all the teams that work on the application, but are much much much faster! 
 
 As the name suggests, **Memory leakage tests** help you to find memory leaks in your application. If expected session time of your users is long, that is something you definitely want to test for.
 
 While other tests are testing functionality of the application, **Snapshot tests** can help you to spot unexpected UI changes. They compare html output of the old version with a new version of the app.
 
-You definitely don't want to neglet security. While regular bugs gives constant irritation, security issues sit still to cause a devastating damage once a moment arises. **Security tests** guard your code and constantly scan it for vulnerabilities.
+You definitely don't want to neglect security. While regular bugs give constant irritation, security issues sit still and hidden to cause a devastating damage once a moment arises. **Security tests** will constantly scan your code for vulnerabilities.
 
-We care a lot about our users, but we should not forget about ourselves, developers. **Code quality tests** ensure same code style within a team or organisation, show you common mistakes and problems in your codebase. Thus speeding up development process and making decision burden on developers lighter.
+We care a lot about our users, but we should not forget about ourselves, developers. **Code quality tests** ensure the same code style within a team or organisation, show you common mistakes and problems in your codebase. Thus speeding up development process and making decision burden on developers lighter.
 
 ## Testing Pyramid
 
