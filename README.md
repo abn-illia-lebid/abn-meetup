@@ -138,7 +138,7 @@ On the product cart we need to render dynamic total price, allow the user to cha
 
 **Checkout**
 
-Checkout is a basic form, so it should be validated properly. User should be able to submit it. And errors should be handled.
+Checkout is a basic form, so it should be validated properly. The user should be able to submit it. And errors should be handled.
 
 ---
 
