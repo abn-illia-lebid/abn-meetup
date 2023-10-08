@@ -166,7 +166,7 @@ Let's return the unchanged price from the function.
 
 ---
 
-First test is passing. We also see that if we call function with 10Euro, we get an expected result. But two other tests are still failing.
+First test is passing. We also see that if we call function with 10Euro, we get an expected result. But the two other tests are still failing.
 
 `Unit function with 2/3 failing tests and 10Euro as a parameter`
 
