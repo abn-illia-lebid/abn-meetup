@@ -34,13 +34,13 @@ There are multiple species of bugs. And to catch them all, you need different we
 - **Functional tests** - are testing your whole application in isolation from external services
 - **E2E tests** - are focusing on integration between your application and external services
 - **Accessibility tests** check for common problems that may make it difficult for users with disabilities to use your website.
-- **Performance tests** will explain you how much time user will take to load the page, how bad network will affect his experience, and what is the load on his processor.
+- **Performance tests** will explain to you how much time a user will take to load the page, how a poor network connection will affect their experience, and what is the load on their processor.
 - **Mutation tests** will randomly generate bugs in your code to check if your tests can spot them. Basically they test your tests.
 - **Contract tests** are checking that agreement between your frontend and backend is still correct. In constrast to E2E tests, they are fast and executed on unit level.
 - **Memory leakage tests** as the name suggests helps you to find memory leaks in your application. If expected session time of your users is long, that is something you definitely want to test for.
-- **Snapshots tests** compares confirmed html output with new version. It helps you spot unexpected UI changes.
+- **Snapshot tests** compares confirmed html output with new version. It helps you spot unexpected UI changes.
 - **Security tests** checks your code for vulnerabilities.
-- **Code quality tests** helps you to ensure same code style withing a team or organisation. Also it shows you common mistakes and problems in your codebase.
+- **Code quality tests** help you to ensure same code style within a team or organisation. Also it shows you common mistakes and problems in your codebase.
 
 ## Testing Pyramid
 
