@@ -58,15 +58,15 @@ As my story told, tests can be quite expensive. You have to use them sparingly.
 
 Hence Testing Pyramid comes into play. It helps you to set the correct priorities, and keep the feedback loop as short as possible.
 
-I would start with static tests. It is an one-time investment. Once you set them up, they will offer advices throught the lifespan of your application.
+I would start with static tests. It is a one-time investment. Once you set them up, they will offer advice throught the lifespan of your application.
 
 Unit tests are the fastest and least demanding. Don't be greedy with them.
 
-You can also setup contracts tests, which would be of a great help. However, for that, you must obtain cooperation from your backend providers. It can be challenging if they are owned by different teams or even companies.
+You can also set up contracts tests, which would be of a great help. However, for that, you must obtain cooperation from your backend providers. It can be challenging if they are owned by different teams or even companies.
 
-If unit tests don't suffice, use Functional tests. They are here to ensure correct communication between parts of your application.
+If unit tests aren't enough, use Functional tests. They are here to ensure correct communication between parts of your application.
 
-And E2E tests will let you know that your application is still producing correct result when it connects to the backend.
+And E2E tests will let you know that your application is still producing a correct result when it connects to the backend.
 
 As a last resort, if nothing else works, add a test case to your manual testing plan. But be prepared to spend a lot of time in the long run.
 
@@ -114,7 +114,7 @@ Let's imagine that we are developing a webshop and see with this example how we 
 
 ### Pipeline and static tests
 
-First step would be to setup pipeline and static tests. It is one-time investment, so once you are done, you will need to make only minor adjustments over lifetime of your application.
+First step would be to setup pipeline and static tests. It is a one-time investment, so once you are done, you will need to make only minor adjustments over lifetime of your application.
 
 ### Traceability matrix
 
