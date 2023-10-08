@@ -180,7 +180,7 @@ Let's apply discount if the price is higher than 1000Euro.
 
 ---
 
-The second test is passing now. And discount is successfully applied to the price we provided.
+The second test is passing now. And the discount is successfully applied to the price we provided.
 
 `Unit function with 1/3 failing test and 5000Euro as a parameter`
 
