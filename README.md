@@ -100,11 +100,7 @@ Were you not able to deceive them? Well, then you can trust your tests.
 
 What if you forget to run your automated tests and deploy an untested application to production?
 
-Worry not, because when you include the tests into the pipeline, they will be run automatically.
-
-The pipeline will also automate the deployment to production, which gives you even more safety and less headache.
-
-You will never be able to deploy an untested application again. 
+Worry not, because when you include the tests into the pipeline, they will be run automatically. And if they fail, the pipeline will stop. It will also automate the deployment to production, which gives you even more safety and less headache.
 
 ## An example
 
