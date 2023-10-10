@@ -74,7 +74,7 @@ As a last resort, if nothing else works, add a test case to your manual testing 
 
 Before you start to test anything, you should understand what is expected from your application. As you gather all your requirements, keep track of their testing status using a traceability matrix.
 
-More often than not, if you find a bug, it means you missed some requirement in the initial stage of planning. So each time you find a bug, check the traceability matrix and update it accordingly.
+More often than not, if you find a bug, it means you missed some requirement in the initial stage of the planning. So each time you find a bug, check the traceability matrix and update it accordingly.
 
 Another advantage of a traceability matrix is that even clients or stakeholders without technical knowledge will be able to understand it.
 
