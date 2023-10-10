@@ -24,7 +24,7 @@ Good evening! My name is Illia, and I am currently working as a frontend develop
 
 ## Full proof testing
 
-Today, I will speak about testing, show you different types of tests, and explain various testing methods and their benefits, and I will finish the presentation with a practical example.
+Today, I will speak about testing, show you different types of tests, and explain various testing methods and their benefits, and I will finish the presentation with a practical example. After that we will have some time for a Q&A session.
 
 ## Types of tests
 
