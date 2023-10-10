@@ -42,7 +42,7 @@ How much time will a user take to load the page? How a poor network connection w
 
 Tests help you to gain trust in your code. But how can you trust your tests? **Mutation tests** will generate artificial bugs to check if your tests can spot them. Basically they will test your tests.
 
-You can also test the connection between backend and frontend with the help of **Contract tests**. They are less powerful than **E2E** tests, and require cooperation between all the teams that work on the application, but are much much much faster! 
+You can also test the connection between backend and frontend with the help of **Contract tests**. They are less powerful than **E2E** tests, and require cooperation between all the teams that work on the application, but are much much much faster than E2E tests! 
 
 As the name suggests, **Memory leakage tests** help you to find memory leaks in your application. If expected session time of your users is long, that is something you definitely want to test for.
 
