@@ -92,7 +92,7 @@ How can you determine if your tests are stable enough?
 
 That's my favorite part.
 
-Break the code! Break the application! Introduce an unexpected change! Do whatever you can to fool your tests. Bring the chaos, and see if they can catch it.
+Break the code! Break the application! Introduce an unexpected change! Do whatever you can to fool your tests. Bring chaos, and see if they can catch it.
 
 Were you not able to deceive them? Well, then you can trust your tests.
 
