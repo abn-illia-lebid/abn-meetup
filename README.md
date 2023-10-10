@@ -94,7 +94,7 @@ That's my favorite part.
 
 Break the code! Break the application! Introduce an unexpected change! Do whatever you can to fool your tests. Introduce chaos, and see if they can catch it.
 
-Were you not able to do it? Well, then you can trust your tests.
+Were you not able to deceive them? Well, then you can trust your tests.
 
 ## Integration with the pipeline
 
