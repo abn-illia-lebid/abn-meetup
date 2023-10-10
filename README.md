@@ -32,7 +32,7 @@ There are multiple species of bugs. And to catch them all, you need different we
 
 To test individual pieces of code, you can use **Unit tests**. They are fast and reliable.
 
-**Functional tests**, on the other hand, don't care about your code, and test your whole application.
+**Functional tests**, on the other hand, don't care about your code, and test your whole application in isolation from the backend.
 
 **E2E tests** are heavy and demanding, but only they can mimic the soul of the user. Their main usage is to ensure that the application is working in harmony with your backend and external services.
 
