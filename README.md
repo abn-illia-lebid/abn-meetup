@@ -110,6 +110,7 @@ Let's imagine that we are developing a webshop and use this example to see how w
 [Wireframe - Product cart](https://wireframe.cc/N1IbBx)
 [Wireframe - Checkout](https://wireframe.cc/an76zN)
 [Wireframe - Payment](https://wireframe.cc/ueBFCq)
+[Wireframe - Success](https://wireframe.cc/RaazxQ)
 
 ### Pipeline and static tests
 
