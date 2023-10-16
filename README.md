@@ -106,7 +106,10 @@ Worry not, because when you include the tests into the pipeline, they will be ru
 
 Let's imagine that we are developing a webshop and use this example to see how we should approach its testing.
 
-[Wireframe](https://wireframe.cc/PuuV02)
+[Wireframe - Catalog](https://wireframe.cc/PuuV02)
+[Wireframe - Product cart](https://wireframe.cc/N1IbBx)
+[Wireframe - Checkout](https://wireframe.cc/an76zN)
+[Wireframe - Payment](https://wireframe.cc/ueBFCq)
 
 ### Pipeline and static tests
 
